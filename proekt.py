@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-
+import requests
 import json
 import os
 from datetime import datetime
@@ -151,6 +151,11 @@ class CurrencyConverter:
                 record["to"],
                 f"{record['result']:.2f}"
             ))
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = CurrencyConverter(root)
+    root.mainloop()
 
 if __name__ == "__main__":
     root = tk.Tk()
